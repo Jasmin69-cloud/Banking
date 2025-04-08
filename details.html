@@ -1,0 +1,42 @@
+<nav>
+  <a href="deposit.html">Deposit</a> |
+  <a href="converter.html">Currency Converter</a> |
+  <a href="details.html">Personal Details</a>
+</nav>
+<hr />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Details</title>
+</head>
+<body>
+  <nav>
+    <a href="deposit.html">Deposit</a> |
+    <a href="converter.html">Currency Converter</a> |
+    <a href="details.html">Personal Details</a>
+  </nav>
+  <hr />
+
+  <h2>Enter Your Details</h2>
+  <form onsubmit="handleForm(event)">
+    <input type="text" id="name" placeholder="Full Name" required /><br/>
+    <input type="email" id="email" placeholder="Email Address" required /><br/>
+    <input type="text" id="phone" placeholder="Phone Number" required /><br/>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="formResult" style="margin-top: 10px;"></div>
+
+  <script>
+    function handleForm(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+
+      document.getElementById("formResult").innerText =
+        `Thank you, ${name}. We've received your details.`;
+    }
+  </script>
+</body>
+</html>
