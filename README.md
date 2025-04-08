@@ -1,2 +1,2 @@
 # Banking
-currency convertor
+currency converter
